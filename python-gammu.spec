@@ -8,13 +8,13 @@ Group:		Development/Languages/Python
 Source0:	http://dl.cihar.com/python-gammu/latest/%{name}-%{version}.tar.bz2
 # Source0-md5:	ad967c35b6398545d4358d3f9915ef50
 URL:		http://icepick.info/
+BuildRequires:	gammu-devel >= 1:1.10.0-0.1
+BuildRequires:	pkgconfig >= 1:0.21-2
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	gammu-devel >= 1:1.10.0-0.1
-BuildRequires:	pkgconfig >= 0.21-2
 %pyrequires_eq	python-modules
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	gammu-libs >= 1:1.10.0-0.1
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Python bingings for Gammu library.
@@ -43,4 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README NEWS AUTHORS
 %attr(755,root,root) %{py_sitedir}/*.so
-%{_examplesdir}/%{name}-%{version}/
+%{_examplesdir}/%{name}-%{version}
