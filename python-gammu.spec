@@ -42,6 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README NEWS AUTHORS
+%dir %{py_sitedir}/gammu
 %attr(755,root,root) %{py_sitedir}/gammu/*.so
 %{py_sitedir}/gammu/*.py[co]
 %{_examplesdir}/%{name}-%{version}
