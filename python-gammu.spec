@@ -10,8 +10,9 @@ Source0:	http://dl.cihar.com/python-gammu/latest/%{name}-%{version}.tar.bz2
 URL:		http://icepick.info/
 BuildRequires:	gammu-devel >= 1:1.11.91
 BuildRequires:	pkgconfig >= 1:0.21-2
-BuildRequires:	python-devel
+BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	gammu-libs >= 1:1.11.91
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -36,6 +37,8 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 python ./setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
+%py_postclean
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -45,6 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitedir}/gammu
 %attr(755,root,root) %{py_sitedir}/gammu/*.so
 %{py_sitedir}/gammu/*.py[co]
-%{py_sitedir}/gammu/*.py
 %{py_sitedir}/*.egg-info
 %{_examplesdir}/%{name}-%{version}
