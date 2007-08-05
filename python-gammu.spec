@@ -8,7 +8,6 @@ Group:		Development/Languages/Python
 Source0:	http://dl.cihar.com/python-gammu/latest/%{name}-%{version}.tar.bz2
 # Source0-md5:	3af56b5ac26d77b5eef00bfe4f2fb2df
 URL:		http://icepick.info/
-BuildRequires:	bluez-libs-devel
 BuildRequires:	gammu-devel >= 1:1.11.91
 BuildRequires:	pkgconfig >= 1:0.21-2
 BuildRequires:	python-devel >= 1:2.5
