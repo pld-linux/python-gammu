@@ -2,13 +2,13 @@ Summary:	Python bingings for Gammu library
 Summary(pl.UTF-8):	Wiązania języka Python dla biblioteki Gammu
 Name:		python-gammu
 Version:	0.26
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Python
 Source0:	http://dl.cihar.com/python-gammu/latest/%{name}-%{version}.tar.bz2
 # Source0-md5:	886d0484b3eeaa306e61733d85407277
 URL:		http://icepick.info/
-BuildRequires:	gammu-devel >= 1:1.11.91
+BuildRequires:	gammu-devel >= 1:1.18.91
 BuildRequires:	pkgconfig >= 1:0.21-2
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
