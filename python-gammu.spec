@@ -2,7 +2,7 @@
 Summary:	Python bindings for Gammu library.
 Name:		%{module}
 Version:	2.3
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Development/Languages/Python
 Source0:	http://dl.cihar.com/python-gammu/%{module}-%{version}.tar.bz2
