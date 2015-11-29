@@ -11,7 +11,7 @@ URL:		http://http://wammu.eu/python-gammu/
 BuildRequires:	gammu-devel >= 1.34.0
 BuildRequires:	python-devel
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	glibc >= 2.4
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
